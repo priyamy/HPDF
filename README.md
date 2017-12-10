@@ -35,11 +35,11 @@ The server side framework that we would be using here is ExpressJS(or Express). 
 - Routing - It determines how the app responds to requests made by user/client at a particular endpoint.   
    - The function used to define routes is `app.METHOD(path,handler)`
 - Methods used   
-      - app.set(name, value)
-      - app.use(path,callback,[,callback...])
-      - app.get(path,callback,[,callback...])
-      - app.post(path,callback,[,callback...])
-      - app.listen(port,[hostname],[backlog],[callback])
+   - app.set(name, value)
+   - app.use(path,callback,[,callback...])
+   - app.get(path,callback,[,callback...])
+   - app.post(path,callback,[,callback...])
+   - app.listen(port,[hostname],[backlog],[callback])
 - Request object - represents HTTP request and has request query string properties.
    - Property used
     1. req.body
