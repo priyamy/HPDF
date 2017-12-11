@@ -14,6 +14,7 @@ The server side framework that we would be using here is ExpressJS(or Express). 
 ## Pre-requisites
 - [X] **NodeJS v8.9.3 LTS** :    
    - Download [here](https://nodejs.org/en/download/)
+   - [X] Includes **npm v5.5.1**
 - [ ] *[Only for Windows]* **Git Bash** : A Linux Command Line Interface(CLI), that enables users of Windows OS to execute git commands.
    - Download [here](https://git-scm.com/download/win)
    - Find the Installation Guide [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
@@ -27,11 +28,12 @@ The server side framework that we would be using here is ExpressJS(or Express). 
 - localhost - also known as loopback address describes the local computer(where our program runs) address and uses the IP address 127.0.0.1. So localhost and 127.0.0.1 can be used interchangeably.
 - Port - It is a endpoint used for communication in the internet protocol. The port numbers range from 0 to 65535. Currently, we have used port 8080 in this project. 
 - Modules - It is a library or file that can be imported into our file using `require()`. We have used the following modules:   
-   - express    
+   - express     
    - path    
    - request   
    - cookieParser
    - bodyParser
+   - pug 
 - Routing - It determines how the app responds to requests made by user/client at a particular endpoint.   
    - The function used to define routes is `app.METHOD(path,handler)`
 - Methods used   
@@ -72,10 +74,11 @@ After successfully installing all the prescribed softwares follow the steps give
    Note: You can also access the files by downloading zip file and then unzipping it.
    2. `MyWebapp$  ls` : *It will show the HPDF folder*
    3. `MyWebapp$  cd HPDF` : *loads HPDF directory*
-   4. `HPDF$  ls` : *Lists all the files which were present in this repository as shown below*
+   4. `HPDF (master)$  ls` : *Lists all the files which were present in this repository as shown below*
      - 2017.jpg   package.json    package-lock.json   server.js     views
-   5. `HPDF$  npm install` : *installs all the required dependencies mentioned in package.json file. To know more about package.json click* [here](https://docs.npmjs.com/files/package.json).
-   6. `HPDF$  node server.js` : *command used to run our app*
+   5. `HPDF (master)$  npm install` : *installs all the required dependencies mentioned in package.json file. To know more about package.json click* [here](https://docs.npmjs.com/files/package.json). *Creates **node_modules** folder in current dir.*
+   6. `HPDF (master)$  node server.js` : *Command used to run our app*. The following text logs on console :
+     - App listening on port 8080
    
    
    **Step 4: Open the browser**
