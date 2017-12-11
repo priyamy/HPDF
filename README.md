@@ -83,9 +83,13 @@ After successfully installing all the prescribed softwares follow the steps give
    
    **Step 4: Open the browser**
    1. Go to http://localhost:8080/ or http://127.0.0.1:8080/ and you will see **Hello World - Priyam** displayed.
+   2. Similarly, go through all the endpoints mentioned in the table below and compare the results.
    
    Note : you can even replace the port 8080 in the program with any other port (except 80 and 443, find out why?) and execute. 
 
+   **Step 5: On the CLI press CTRl+C to close the app**
+   
+   
 ## API Reference
 1. [Node.js v9.2.1 API Documentation](https://nodejs.org/api/)
 2. [npm API Documentation](https://docs.npmjs.com/)
