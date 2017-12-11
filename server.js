@@ -34,7 +34,7 @@ app.get('/getcookies',(req,res) => {
 	res.send(JSON.stringify(req.cookies));
 });
 
-//Denies request to /robots.txt page with a r
+//Denies request to /robots.txt page and renders index.pug for achieving the same
 app.get('/robots.txt',(req,res) => res.render('index'));
 
 //Displays an image that is rendered from the server
@@ -65,25 +65,23 @@ app.get('/authors',(req,res) => {
 		json: true
 	};
 
-	//fetches the names of authors from the url and stores the result in x[]
+	//request1 fetches the names of authors from the url and stores the result in x[]
 	request1(options, function(err,response,body)
 	{	
 		for(i=0,u=body.length;i<u;i++){
-			j=body[i].id;		//using variable j to ensure that the data is stored in a sorted way as per the id				
-			j--;			// and from index 0 onwards.
-			x[j]=body[i].name;	//storing the names in x[] according to their id minus one, [index]=userId-1; x[i]=name of i-1
+			j=body[i].id;		//using j to ensure that the data is stored in a sorted way as per the id sequence				
+			x[--j]=body[i].name;	//storing the names in x[] according to their id minus one, so data is stored from x[0] to x[9]
 		}
 	});
 	
-	//fetches the count of their posts and stores the result in count[]
+	//request2 fetches the count of their posts and stores the result in count[]
 	request2(options1, function(err,response,body)
 	{	
 		for(i =0;i<u;i++) count[i]=0;	//Initialize x[] to 0 having size equal to u i.e. the no. of authors;
 	
 		for(i=0,v=body.length;i<v;i++){
 			j=body[i].userId;	//first,get the UserId 
-			j--;			//here again, we want to store data from index 0 of array count
-			count[j]++;		//increment the corresponding array element such that index=userId-1  	
+			count[--j]++;		//increment the corresponding array element such that index=userId-1  	
 		};
 		
 		//Now that we have names array and count array, we send them to authors.pug to display them in the form of lists as prescribed.
